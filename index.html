@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- tailwind and daisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- style css -->
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body class="poppins-font">
+    <section class="container mx-auto bg-[#1E1E1E] min-h-screen bg-[url(images/background.png)] bg-no-repeat bg-center p-5">
+        <div class="text-white text-center" id="firstSection">
+            <div class="flex flex-col items-center justify-center min-h-screen gap-10">
+                <h2 class="anton-font lg:text-9xl text-4xl">ALPHABET CLASH</h2>
+                <p class="text-xl">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
+                <button onclick="play()" class="btn">Play Now</button>
+            </div>
+        </div>
+
+        <div id="secondSection" class="lg:pt-14 hidden">
+            <div class="flex justify-center">
+                <div class="artboard artboard-horizontal phone-4 bg-[#FFFFFFCC] border-[20px] rounded-2xl border-[#010313CC] flex justify-start items-center flex-col text-center gap-20">
+                    <p class="bg-[#010313CC] rounded-b-2xl text-white text-xs lg:text-base h-8 px-3">Don't watch keyboard  while playing...</p>
+
+                    <p id="alphabet-or-letter" class="text-9xl text-black">Y</p>
+                </div>
+            </div>
+            <div class="lg:mt-10 mt-4">
+                <div class="flex justify-center gap-1 lg:gap-3 lg:my-1 lg:w-full">
+                    <kbd id="q" class="kbd w-[30px] h-[30px] text-xs lg:w-[60px] lg:h-[57px] lg:font-extrabold lg:text-xl">q</kbd>
+                    <kbd id="w" class="kbd w-[30px] h-[30px] text-xs lg:w-[60px] lg:h-[57px] lg:font-extrabold lg:text-xl">w</kbd>
+                    <kbd id="e" class="kbd w-[30px] h-[30px] text-xs lg:w-[60px] lg:h-[57px] lg:font-extrabold lg:text-xl">e</kbd>
+                    <kbd id="r" class="kbd w-[30px] h-[30px] text-xs lg:w-[60px] lg:h-[57px] lg:font-extrabold lg:text-xl">r</kbd>
+                    <kbd id="t" class="kbd w-[30px] h-[30px] text-xs lg:w-[60px] lg:h-[57px] lg:font-extrabold lg:text-xl">t</kbd>
+                    <kbd id="y" class="kbd w-[30px] h-[30px] text-xs lg:w-[60px] lg:h-[57px] lg:font-extrabold lg:text-xl">y</kbd>
+                    <kbd id="u" class="kbd w-[30px] h-[30px] text-xs lg:w-[60px] lg:h-[57px] lg:font-extrabold lg:text-xl">u</kbd>
+                    <kbd id="i" class="kbd w-[30px] h-[30px] text-xs lg:w-[60px] lg:h-[57px] lg:font-extrabold lg:text-xl">i</kbd>
+                    <kbd id="o" class="kbd w-[30px] h-[30px] text-xs lg:w-[60px] lg:h-[57px] lg:font-extrabold lg:text-xl">o</kbd>
+                    <kbd id="p" class="kbd w-[30px] h-[30px] text-xs lg:w-[60px] lg:h-[57px] lg:font-extrabold lg:text-xl">p</kbd>
+                </div> 
+                <div class="flex justify-center gap-1 lg:gap-3 my-3 w-full">
+                    <kbd id="a" class="kbd w-[30px] h-[30px] text-xs lg:w-[60px] lg:h-[57px] lg:font-extrabold lg:text-xl">a</kbd>
+                    <kbd id="s" class="kbd w-[30px] h-[30px] text-xs lg:w-[60px] lg:h-[57px] lg:font-extrabold lg:text-xl">s</kbd>
+                    <kbd id="d" class="kbd w-[30px] h-[30px] text-xs lg:w-[60px] lg:h-[57px] lg:font-extrabold lg:text-xl">d</kbd>
+                    <kbd id="f" class="kbd w-[30px] h-[30px] text-xs lg:w-[60px] lg:h-[57px] lg:font-extrabold lg:text-xl">f</kbd>
+                    <kbd id="g" class="kbd w-[30px] h-[30px] text-xs lg:w-[60px] lg:h-[57px] lg:font-extrabold lg:text-xl">g</kbd>
+                    <kbd id="h" class="kbd w-[30px] h-[30px] text-xs lg:w-[60px] lg:h-[57px] lg:font-extrabold lg:text-xl">h</kbd>
+                    <kbd id="j" class="kbd w-[30px] h-[30px] text-xs lg:w-[60px] lg:h-[57px] lg:font-extrabold lg:text-xl">j</kbd>
+                    <kbd id="k" class="kbd w-[30px] h-[30px] text-xs lg:w-[60px] lg:h-[57px] lg:font-extrabold lg:text-xl">k</kbd>
+                    <kbd id="l" class="kbd w-[30px] h-[30px] text-xs lg:w-[60px] lg:h-[57px] lg:font-extrabold lg:text-xl">l</kbd>
+                </div> 
+                <div class="flex justify-center gap-1 lg:gap-3 my-1 w-full">
+                    <kbd id="z" class="kbd w-[30px] h-[30px] text-xs lg:w-[60px] lg:h-[57px] lg:font-extrabold lg:text-xl">z</kbd>
+                    <kbd id="x" class="kbd w-[30px] h-[30px] text-xs lg:w-[60px] lg:h-[57px] lg:font-extrabold lg:text-xl">x</kbd>
+                    <kbd id="c" class="kbd w-[30px] h-[30px] text-xs lg:w-[60px] lg:h-[57px] lg:font-extrabold lg:text-xl">c</kbd>
+                    <kbd id="v" class="kbd w-[30px] h-[30px] text-xs lg:w-[60px] lg:h-[57px] lg:font-extrabold lg:text-xl">v</kbd>
+                    <kbd id="b" class="kbd w-[30px] h-[30px] text-xs lg:w-[60px] lg:h-[57px] lg:font-extrabold lg:text-xl">b</kbd>
+                    <kbd id="n" class="kbd w-[30px] h-[30px] text-xs lg:w-[60px] lg:h-[57px] lg:font-extrabold lg:text-xl">n</kbd>
+                    <kbd id="m" class="kbd w-[30px] h-[30px] text-xs lg:w-[60px] lg:h-[57px] lg:font-extrabold lg:text-xl">m</kbd>
+                    <kbd id="/" class="kbd w-[30px] h-[30px] text-xs lg:w-[60px] lg:h-[57px] lg:font-extrabold lg:text-xl">/</kbd>
+                </div>
+            </div>
+            <div class="container mx-auto pt-3 lg:px-48 flex justify-between">
+                <button class="btn bg-[#894189] border-0 text-white hover:bg-[#894189]">
+                    Life
+                    <img src="images/love.png" alt="">
+                    <span id="current-life">5</span>
+                </button>
+                <button  class="btn bg-[#360490] border-0 text-white hover:bg-[#360490]">
+                    Score
+                    <img src="images/doller.png" alt="">
+                    <span id="score">0</span>
+                </button>
+            </div>
+        </div>
+
+        <div id="thirdSection" class="hidden">
+            <div class="flex justify-center items-center min-h-screen">
+                <div class="text-white bg-[#6f50cb] py-10 flex items-center justify-center flex-col w-96 rounded-3xl gap-3">
+                    <h1 class="text-6xl"><span class="font-extrabold">Score :</span> <span id="game-score">0</span></h1>
+                    <button onclick="play()" class="btn">Play Again</button>
+                    <p>practice will make you pro</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- javascript add -->
+    <script src="script/common_function.js"></script>
+    <script src="script/play.js"></script>
+</body>
+</html>
